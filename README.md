@@ -51,7 +51,7 @@ file = 'path_to_file'
 
 Kerb.render_to_file(erb, vars, file)
 
-File.read(file)) #=> "my lovely garden"
+File.read(file) #=> "my lovely garden"
 ```
 
 ## Contributing
