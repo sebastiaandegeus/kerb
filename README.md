@@ -1,8 +1,6 @@
 # Kerb
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/kerb`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+__ERB__ rendering can be a little annoying at times. So this library aims to solve this problem by offering an easy interface to render ERB from a string, from a file or towards a file.
 
 ## Installation
 
@@ -14,28 +12,54 @@ gem 'kerb'
 
 And then execute:
 
-    $ bundle
+```
+$ bundle
+```
 
 Or install it yourself as:
 
-    $ gem install kerb
+```
+$ gem install kerb
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+### Render a string
 
-## Development
+```ruby
+erb = 'my <%= @foo %> <%= @bar %>'
+vars = {
+  foo: 'lovely',
+  bar: 'garden'
+}
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+Kerb.render(erb, vars) #=> "my lovely garden"
+```
 
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+### Render to a file
+
+```ruby
+erb = 'my <%= @foo %> <%= @bar %>'
+vars = {
+  foo: 'lovely',
+  bar: 'garden'
+}
+file = 'path_to_file'
+
+Kerb.render_to_file(erb, vars, file)
+
+File.read(file)) #=> "my lovely garden"
+```
 
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/sebastiaandegeus/kerb. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
-
 ## License
 
-The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
+Copyright (c) 2016 Sebastiaan de Geus
+
+The gem is available as open source under the terms of the [MIT License](https://github.com/sebastiaandegeus/kerb/blob/master/LICENSE).
+
+
 
