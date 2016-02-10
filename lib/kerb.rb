@@ -1,22 +1,8 @@
-require 'kerb/version'
 require 'erb'
+require 'kerb/template'
+require 'kerb/version'
 
 module Kerb
-  class Template
-    def initialize(erb, vars)
-      @erb = erb
-      vars.each { |k, v| instance_variable_set("@#{k}", v) }
-    end
-
-    def render
-      ERB.new(@erb).result(binding)
-    end
-
-    def render_to_file(file)
-      File.open(file, 'w') { |f| f.write(render) }
-    end
-  end
-
   def self.render(erb, vars)
     template = Kerb::Template.new(erb, vars)
     template.render
