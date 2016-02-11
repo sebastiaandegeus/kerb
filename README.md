@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/sebastiaandegeus/kerb.svg?branch=master)](https://travis-ci.org/sebastiaandegeus/kerb)
 [![Code Climate](https://codeclimate.com/github/sebastiaandegeus/kerb/badges/gpa.svg)](https://codeclimate.com/github/sebastiaandegeus/kerb)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sebastiaandegeus/kerb/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sebastiaandegeus/kerb/?branch=master)
 
 __ERB__ rendering can be a little annoying at times. So this library aims to solve this problem by offering an easy interface to render ERB from a string, from a file or towards a file.
 
