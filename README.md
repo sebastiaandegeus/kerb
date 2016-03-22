@@ -1,5 +1,6 @@
 # Kerb
 
+[![Gem Version](https://badge.fury.io/rb/kerb.svg)](https://badge.fury.io/rb/kerb)
 [![Build Status](https://travis-ci.org/sebastiaandegeus/kerb.svg?branch=master)](https://travis-ci.org/sebastiaandegeus/kerb)
 [![Code Climate](https://codeclimate.com/github/sebastiaandegeus/kerb/badges/gpa.svg)](https://codeclimate.com/github/sebastiaandegeus/kerb)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/sebastiaandegeus/kerb/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/sebastiaandegeus/kerb/?branch=master)
